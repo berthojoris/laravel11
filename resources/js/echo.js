@@ -12,3 +12,13 @@ window.Echo = new Echo({
     forceTLS: (import.meta.env.VITE_REVERB_SCHEME ?? 'https') === 'https',
     enabledTransports: ['ws', 'wss'],
 });
+
+window.Echo.channel('pushNotifChannel')
+    .listen('PushNotification', (event) => {
+        console.log(event);
+        alert("yeah")
+    })
+    .error((error) => {
+        alert(error);
+    });
+
