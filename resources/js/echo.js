@@ -16,7 +16,7 @@ window.Echo = new Echo({
 window.Echo.channel('pushNotifChannel')
     .listen('PushNotification', (event) => {
         console.log(event);
-        alert("yeah")
+        // alert("yeah")
     })
     .error((error) => {
         alert(error);
