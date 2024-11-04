@@ -20,7 +20,7 @@ class PushNotification implements ShouldBroadcastNow
     public function __construct($message)
     {
         $this->message = $message;
-		logger("masuk");
+		// logger("masuk");
     }
 
     /**
